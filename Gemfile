@@ -1,31 +1,59 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rails', '3.0.9'
+gem 'rails', '3.2.13'
+gem 'thin'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+#Authentication/Authorization
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'devise'
+gem 'cancan'
 
-gem 'pg'
+#Models
+gem 'mysql2'
+gem 'sentient_user'
+gem 'squeel'
+gem 'kaminari'
 
-# Use unicorn as the web server
-# gem 'unicorn'
+#Controllers
+gem 'inherited_resources'
+gem 'has_scope'
+gem 'strong_parameters'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+#Views
+gem 'active_model_serializers', '~> 0.8.0'
+gem 'haml-rails'
+gem 'oj'
 
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
-# gem 'ruby-debug19', :require => 'ruby-debug'
+#Assets
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'therubyracer', :platforms => :ruby
+  gem 'uglifier', '>= 1.0.3'
+end
+gem 'jquery-rails'
 
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
+#Javascript
+gem 'gon'
+gem 'js-routes'
+# gem 'firehose'
+# gem 'ember-rails'
 
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
+#Other
+gem 'ox'
+gem 'houdini'
+gem 'fast_xor'
+gem 'fast_blank'
+gem 'futuroscope'
+gem 'guid'
+gem 'configatron'
+gem 'rails-queue'
+git "git://github.com/mperham/sidekiq.git", :branch => 'rails4' do
+  gem 'sidekiq'
+end
+
+group :development do
+  gem 'pry-rails'
+  gem 'bullet', :git => 'https://github.com/flyerhzm/bullet.git'
+end

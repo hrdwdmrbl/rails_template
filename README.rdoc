@@ -1,0 +1,5 @@
+Make sure to:
+
+1. Create a secret_token for secret_token.rb
+2. Set facebook_app_id and facebook_secret in configatron.rb
+3. Set the Rails App name everywhere by finding and replacing the word TEMPLATE everywhere. ie. database.rb, application.rb, etc.
