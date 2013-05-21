@@ -49,9 +49,7 @@ gem 'futuroscope'
 gem 'guid'
 gem 'configatron'
 gem 'rails-queue'
-git "git://github.com/mperham/sidekiq.git", :branch => 'rails4' do
-  gem 'sidekiq'
-end
+gem 'sidekiq'
 
 group :development do
   gem 'pry-rails'
